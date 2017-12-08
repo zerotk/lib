@@ -1,3 +1,4 @@
+import contextlib
 import os
 
 
@@ -17,3 +18,13 @@ def find_up(name, path):
             return filename
         directory = os.path.dirname(directory)
     return None
+
+
+@contextlib.contextmanager
+def popd(dir):
+    curdir= os.getcwd()
+    try:
+        os.chdir(dir)
+        yield  os.getcwd()
+    finally:
+        os.chdir(curdir)
