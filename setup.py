@@ -32,6 +32,7 @@ setup(
     namespace_packages=['zerotk'],
     install_requires=[
         'ruamel.yaml',
+        'semantic_version',
     ],
     dependency_links=[
     ],
