@@ -33,6 +33,7 @@ setup(
     install_requires=[
         'ruamel.yaml',
         'semantic_version',
+        'pathspec',
     ],
     dependency_links=[
     ],
