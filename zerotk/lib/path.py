@@ -14,7 +14,7 @@ def find_up(name, path):
     directory = os.path.abspath(path)
     while directory:
         filename = os.path.join(directory, name)
-        if os.path.isfile(filename):
+        if os.path.exists(filename):
             return filename
         if directory == "/":
             raise FileNotFoundError("The file {} was not found".format(name))
