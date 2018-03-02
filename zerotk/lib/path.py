@@ -16,6 +16,8 @@ def find_up(name, path):
         filename = os.path.join(directory, name)
         if os.path.isfile(filename):
             return filename
+        if directory == "/":
+            raise FileNotFoundError("The file {} was not found".format(name))
         directory = os.path.dirname(directory)
     return None
 
@@ -25,6 +27,6 @@ def popd(dir):
     curdir= os.getcwd()
     try:
         os.chdir(dir)
-        yield  os.getcwd()
+        yield os.getcwd()
     finally:
         os.chdir(curdir)
