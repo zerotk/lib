@@ -41,6 +41,7 @@ setup(
     tests_require=[
         'pytest',
         'datadiff',
+        'pytest-datadir',
     ],
 
     license="MIT license",

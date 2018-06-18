@@ -1,3 +1,4 @@
+from ruamel.yaml.constructor import DuplicateKeyError
 
 
 def yaml_from_file(filename_):
