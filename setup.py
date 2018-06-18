@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 from setuptools import setup
 
 setup(
@@ -12,18 +9,16 @@ setup(
 
     url='https://github.com/zerotk/zerotk.lib',
 
-    description="Collection of basic Pytho utilities.",
-    long_description="Collection of basic Pytho utilities.",
+    description="Collection of basic Python utilities.",
+    long_description="Collection of basic Python utilities.",
 
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Natural Language :: English',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
     ],
     keywords='',
 
@@ -35,14 +30,17 @@ setup(
         'semantic_version',
         'pathspec',
     ],
-    dependency_links=[
+    setup_requires=[
+        'setuptools_scm'
     ],
-    setup_requires=['setuptools_scm'],
-    tests_require=[
-        'pytest',
-        'datadiff',
-        'pytest-datadir',
-    ],
-
+    extra_require={
+        'testing': [
+            'pytest',
+            'datadiff',
+            'pytest-datadir',
+            'pytest-cov',
+            'codecov',
+        ]
+    },
     license="MIT license",
 )
