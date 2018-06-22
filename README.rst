@@ -9,4 +9,7 @@ Collection of basic Python utilities.
 .. |ci| image:: https://img.shields.io/travis/zerotk/lib.svg
   :target: https://travis-ci.org/zerotk/lib
 
-|ci| |version|
+.. |coverage| image:: https://img.shields.io/codecov/c/github/zerotk/lib.svg
+  :target: https://codecov.io/gh/zerotk/lib
+
+|ci| |version| |coverage|
