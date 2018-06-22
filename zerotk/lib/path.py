@@ -24,7 +24,7 @@ def find_up(name, path):
 
 @contextlib.contextmanager
 def popd(dir):
-    curdir= os.getcwd()
+    curdir = os.getcwd()
     try:
         os.chdir(dir)
         yield os.getcwd()
