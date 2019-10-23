@@ -1,31 +1,23 @@
-
-
 def test_gitignored_filter(datadir):
     from zerotk.lib.gitignored import GitIgnored
 
-    gitignored = GitIgnored(
-        git_directory='git-root.txt',
-    )
+    gitignored = GitIgnored(git_directory="git-root.txt")
 
     filenames = [
-        datadir / 'test_00/ignored/alpha.txt',
-        datadir / 'test_00/included/alpha.txt',
+        datadir / "test_00/ignored/alpha.txt",
+        datadir / "test_00/included/alpha.txt",
     ]
 
-    assert gitignored.filter(filenames) == [
-        datadir / 'test_00/included/alpha.txt',
-    ]
+    assert gitignored.filter(filenames) == [datadir / "test_00/included/alpha.txt"]
 
 
 def test_gitignored_list(datadir):
     from zerotk.lib.gitignored import GitIgnored
 
-    gitignored = GitIgnored(
-        git_directory='git-root.txt',
-    )
+    gitignored = GitIgnored(git_directory="git-root.txt")
 
-    assert gitignored.list(datadir / 'test_00/ignored/alpha.txt') == [
-        datadir / 'test_00/.gitignore'
+    assert gitignored.list(datadir / "test_00/ignored/alpha.txt") == [
+        datadir / "test_00/.gitignore"
     ]
 
 

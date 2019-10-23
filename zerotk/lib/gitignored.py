@@ -7,7 +7,7 @@ class GitIgnored(object):
     Helper class to find out if a filename is being ignored by .gitignore files.
     """
 
-    def __init__(self, git_directory='.git', gitignore_filename='.gitignore'):
+    def __init__(self, git_directory=".git", gitignore_filename=".gitignore"):
         self.__gitignore_filename = gitignore_filename
         self.__git_directory = git_directory
         self._logger = logging.getLogger(__name__)
@@ -69,7 +69,7 @@ class GitIgnored(object):
         :param Path filename:
         :return list(str):
         """
-        result = filename.read_text().split('\n')
+        result = filename.read_text().split("\n")
         result = [i.strip() for i in result]
         result = [i for i in result if len(i) > 0]
         self._logger.debug("_read_patterns", result)

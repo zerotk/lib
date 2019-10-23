@@ -16,5 +16,5 @@ def urlconcat(*parts):
     """
     result = []
     for i_part in parts:
-        result.append(i_part.strip('/'))
-    return '/'.join(result)
+        result.append(i_part.strip("/"))
+    return "/".join(result)

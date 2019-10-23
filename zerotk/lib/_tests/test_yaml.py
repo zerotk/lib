@@ -1,5 +1,3 @@
-
-
 def test_ordereddict():
     from zerotk.lib.yaml import yaml_load
     from zerotk.lib.text import dedent
@@ -20,7 +18,7 @@ def test_ordereddict():
         )
     )
     assert isinstance(contents, OrderedDict)
-    assert isinstance(contents['root'], OrderedDict)
+    assert isinstance(contents["root"], OrderedDict)
 
 
 def test_duplicate_keys():

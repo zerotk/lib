@@ -2,7 +2,7 @@ from ruamel.yaml.constructor import DuplicateKeyError
 
 
 def yaml_from_file(filename_):
-    with open(filename_, 'r') as iss:
+    with open(filename_, "r") as iss:
         content = iss.read()
         result = yaml_load(content)
     return result

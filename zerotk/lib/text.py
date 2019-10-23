@@ -1,6 +1,4 @@
-
-
-def safesplit(text, sep, default='', size=2):
+def safesplit(text, sep, default="", size=2):
     result = text.split(sep)
     fill_count = size - len(result)
     filler = [default] * fill_count
@@ -20,13 +18,13 @@ def dedent(text):
     from textwrap import dedent as _dedent
 
     # Ignores dedent if the text is a single line.
-    if '\n' not in text:
+    if "\n" not in text:
         return text
 
     result = _dedent(text)
 
     # Removes (first) leading EOL if there's any.
-    if result.startswith('\n'):
+    if result.startswith("\n"):
         result = result[1:]
 
     return result
